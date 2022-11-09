@@ -1,0 +1,16 @@
+const int buttonPin = 2; // Den pin er knapp är kopplad till 
+const int ledPin = 13; // Den pin er LED-lampa är kopplad till 
+int buttonState = 0; // Variabeln som innehåller värdet som avläses från er knapp 
+void setup() { 
+    pinMode(13, OUTPUT);
+    pinMode(2, INPUT);
+} 
+void loop() {
+  buttonState = digitalRead(2); // Här vill vi att variabeln buttonState ska ha det värde vi avläser från den pin som er knapp är kopplad till. 
+  if (buttonState == HIGH) { 
+    digitalWrite(13, HIGH);
+  } 
+  else { 
+    digitalWrite(13, LOW);
+  } 
+} 
